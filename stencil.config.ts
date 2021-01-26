@@ -1,4 +1,7 @@
 import { Config } from '@stencil/core';
+import { postcss } from '@stencil/postcss';
+import autoprefixer from 'autoprefixer';
+import tailwindcss from 'tailwindcss';
 
 export const config: Config = {
   namespace: 'smpl-list',
@@ -18,4 +21,9 @@ export const config: Config = {
       serviceWorker: null, // disable service workers
     },
   ],
+  plugins: [
+    postcss({
+      plugins: [autoprefixer(), tailwindcss()]
+    })
+  ]
 };
