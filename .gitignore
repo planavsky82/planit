@@ -5,6 +5,7 @@
 /tmp
 /out-tsc
 /www
+/src/src/components.d.ts
 
 # dependencies
 /node_modules
