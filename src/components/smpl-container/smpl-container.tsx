@@ -9,16 +9,16 @@ add tailwindcss
 */
 
 @Component({
-  tag: 'smpl-list-item',
-  styleUrl: 'smpl-list-item.css',
+  tag: 'smpl-container',
+  styleUrl: 'smpl-container.css',
   shadow: true,
 })
-export class SmplListItem {
+export class SmplContainerItem {
 
   render() {
     return (
       <Host>
-        <div class="shadow-md border-gray-300 border-2 p-2 mb-1">
+        <div class="shadow-md border-gray-300 rounded-lg border p-2 mb-1">
           <slot></slot>
         </div>
       </Host>

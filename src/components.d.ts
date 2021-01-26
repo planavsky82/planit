@@ -6,32 +6,32 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
-    interface SmplListItem {
+    interface SmplContainer {
     }
 }
 declare global {
-    interface HTMLSmplListItemElement extends Components.SmplListItem, HTMLStencilElement {
+    interface HTMLSmplContainerElement extends Components.SmplContainer, HTMLStencilElement {
     }
-    var HTMLSmplListItemElement: {
-        prototype: HTMLSmplListItemElement;
-        new (): HTMLSmplListItemElement;
+    var HTMLSmplContainerElement: {
+        prototype: HTMLSmplContainerElement;
+        new (): HTMLSmplContainerElement;
     };
     interface HTMLElementTagNameMap {
-        "smpl-list-item": HTMLSmplListItemElement;
+        "smpl-container": HTMLSmplContainerElement;
     }
 }
 declare namespace LocalJSX {
-    interface SmplListItem {
+    interface SmplContainer {
     }
     interface IntrinsicElements {
-        "smpl-list-item": SmplListItem;
+        "smpl-container": SmplContainer;
     }
 }
 export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
-            "smpl-list-item": LocalJSX.SmplListItem & JSXBase.HTMLAttributes<HTMLSmplListItemElement>;
+            "smpl-container": LocalJSX.SmplContainer & JSXBase.HTMLAttributes<HTMLSmplContainerElement>;
         }
     }
 }
