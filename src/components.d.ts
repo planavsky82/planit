@@ -6,32 +6,32 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
-    interface SmplContainer {
+    interface PlanitContainer {
     }
 }
 declare global {
-    interface HTMLSmplContainerElement extends Components.SmplContainer, HTMLStencilElement {
+    interface HTMLPlanitContainerElement extends Components.PlanitContainer, HTMLStencilElement {
     }
-    var HTMLSmplContainerElement: {
-        prototype: HTMLSmplContainerElement;
-        new (): HTMLSmplContainerElement;
+    var HTMLPlanitContainerElement: {
+        prototype: HTMLPlanitContainerElement;
+        new (): HTMLPlanitContainerElement;
     };
     interface HTMLElementTagNameMap {
-        "smpl-container": HTMLSmplContainerElement;
+        "planit-container": HTMLPlanitContainerElement;
     }
 }
 declare namespace LocalJSX {
-    interface SmplContainer {
+    interface PlanitContainer {
     }
     interface IntrinsicElements {
-        "smpl-container": SmplContainer;
+        "planit-container": PlanitContainer;
     }
 }
 export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
-            "smpl-container": LocalJSX.SmplContainer & JSXBase.HTMLAttributes<HTMLSmplContainerElement>;
+            "planit-container": LocalJSX.PlanitContainer & JSXBase.HTMLAttributes<HTMLPlanitContainerElement>;
         }
     }
 }

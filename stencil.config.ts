@@ -4,7 +4,7 @@ import autoprefixer from 'autoprefixer';
 import tailwindcss from 'tailwindcss';
 
 export const config: Config = {
-  namespace: 'smpl-container',
+  namespace: 'planit-container',
   outputTargets: [
     {
       type: 'dist',

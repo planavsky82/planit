@@ -9,11 +9,11 @@ add tailwindcss
 */
 
 @Component({
-  tag: 'smpl-container',
-  styleUrl: 'smpl-container.css',
+  tag: 'planit-container',
+  styleUrl: 'planit-container.css',
   shadow: true,
 })
-export class SmplContainerItem {
+export class PlanitContainerItem {
 
   render() {
     return (

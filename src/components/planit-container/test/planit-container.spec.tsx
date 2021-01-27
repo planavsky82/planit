@@ -1,18 +1,18 @@
 import { newSpecPage } from '@stencil/core/testing';
-import { SmplContainerItem } from '../smpl-container';
+import { PlanitContainerItem } from '../planit-container';
 
-describe('smpl-container', () => {
+describe('planit-container', () => {
   it('renders', async () => {
     const page = await newSpecPage({
-      components: [SmplContainerItem],
-      html: `<smpl-container></smpl-container>`,
+      components: [PlanitContainerItem],
+      html: `<planit-container></planit-container>`,
     });
     expect(page.root).toEqualHtml(`
-      <smpl-container>
+      <planit-container>
         <mock:shadow-root>
           <slot></slot>
         </mock:shadow-root>
-      </smpl-container>
+      </planit-container>
     `);
   });
 });
