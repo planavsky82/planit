@@ -20,10 +20,10 @@
     "test": "stencil test --spec --e2e",
     "test.watch": "stencil test --spec --e2e --watchAll",
     "generate": "stencil generate",
-    "release:major": "npm version major",
-    "release:minor": "npm version minor",
-    "release:patch": "npm version patch",
-    "publish": "npm publish"
+    "release:major": "npm version major && npm run build",
+    "release:minor": "npm version minor && npm run build",
+    "release:patch": "npm version patch && npm run build",
+    "publish": "cd dist && npm publish && cd .."
   },
   "dependencies": {
     "@stencil/core": "^2.0.1",
