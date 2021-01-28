@@ -23,7 +23,7 @@
     "release:major": "npm version major && npm run build",
     "release:minor": "npm version minor && npm run build",
     "release:patch": "npm version patch && npm run build",
-    "publish": "cd dist && npm publish && cd .."
+    "publish": "cp package.json dist && cd dist && npm publish && cd .."
   },
   "dependencies": {
     "@stencil/core": "^2.0.1",
