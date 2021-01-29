@@ -35,5 +35,14 @@
     "@stencil/postcss": "^2.0.0",
     "@types/autoprefixer": "^10.2.0",
     "autoprefixer": "^10.2.3"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/planavsky82/planit.git"
+  },
+  "author": "Anthony Planavsky",
+  "bugs": {
+    "url": "https://github.com/planavsky82/planit/issues"
+  },
+  "homepage": "https://github.com/planavsky82/planit#readme"
 }
