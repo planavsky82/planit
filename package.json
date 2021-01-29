@@ -20,7 +20,7 @@
     "test": "stencil test --spec --e2e",
     "test.watch": "stencil test --spec --e2e --watchAll",
     "generate": "stencil generate",
-    "release-package": "npm run build && npm version $1 && cp package.json dist",
+    "release-package": "func() { npm run build && npm version $1 && cp package.json dist; }; func",
     "test2": " && cd dist && npm publish --access public && cd .."
   },
   "dependencies": {
