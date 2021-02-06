@@ -23,15 +23,15 @@
     "release-package": "func() { npm run build && npm version \"$1\" && npm publish --access public; }; func"
   },
   "dependencies": {
-    "@stencil/core": "^2.0.1",
-    "postcss": "^8.2.4",
-    "tailwindcss": "^2.0.2"
+    "@stencil/core": "^2.0.1"
   },
   "license": "MIT",
   "devDependencies": {
     "@stencil/postcss": "^2.0.0",
     "@types/autoprefixer": "^10.2.0",
-    "autoprefixer": "^10.2.3"
+    "autoprefixer": "^10.2.3",
+    "postcss": "^8.2.4",
+    "tailwindcss": "^2.0.2"
   },
   "repository": {
     "type": "git",
