@@ -6,45 +6,49 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
-    interface PlanitContainer {
+    interface PlanitCollection {
+        "columns": number;
+        "type": 'grid' | 'list';
     }
-    interface PlanitList {
+    interface PlanitContainer {
     }
 }
 declare global {
+    interface HTMLPlanitCollectionElement extends Components.PlanitCollection, HTMLStencilElement {
+    }
+    var HTMLPlanitCollectionElement: {
+        prototype: HTMLPlanitCollectionElement;
+        new (): HTMLPlanitCollectionElement;
+    };
     interface HTMLPlanitContainerElement extends Components.PlanitContainer, HTMLStencilElement {
     }
     var HTMLPlanitContainerElement: {
         prototype: HTMLPlanitContainerElement;
         new (): HTMLPlanitContainerElement;
     };
-    interface HTMLPlanitListElement extends Components.PlanitList, HTMLStencilElement {
-    }
-    var HTMLPlanitListElement: {
-        prototype: HTMLPlanitListElement;
-        new (): HTMLPlanitListElement;
-    };
     interface HTMLElementTagNameMap {
+        "planit-collection": HTMLPlanitCollectionElement;
         "planit-container": HTMLPlanitContainerElement;
-        "planit-list": HTMLPlanitListElement;
     }
 }
 declare namespace LocalJSX {
+    interface PlanitCollection {
+        "columns"?: number;
+        "type"?: 'grid' | 'list';
+    }
     interface PlanitContainer {
     }
-    interface PlanitList {
-    }
     interface IntrinsicElements {
+        "planit-collection": PlanitCollection;
         "planit-container": PlanitContainer;
-        "planit-list": PlanitList;
     }
 }
 export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
+            "planit-collection": LocalJSX.PlanitCollection & JSXBase.HTMLAttributes<HTMLPlanitCollectionElement>;
             "planit-container": LocalJSX.PlanitContainer & JSXBase.HTMLAttributes<HTMLPlanitContainerElement>;
-            "planit-list": LocalJSX.PlanitList & JSXBase.HTMLAttributes<HTMLPlanitListElement>;
         }
     }
 }

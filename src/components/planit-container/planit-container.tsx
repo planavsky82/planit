@@ -18,7 +18,7 @@ export class PlanitContainerItem {
   render() {
     return (
       <Host>
-        <div class="shadow-md border-gray-300 rounded-lg border p-2 mb-1">
+        <div class="shadow-md border-gray-500 rounded-lg border border-solid p-3 mb-1">
           <slot></slot>
         </div>
       </Host>

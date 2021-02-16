@@ -1,0 +1,17 @@
+:host div {
+  display: flex;
+}
+
+div.grid {
+  @apply flex-wrap;
+}
+
+div.grid ::slotted(*) {
+  flex: 1 1 20%;
+  @apply mt-1;
+  @apply mx-1;
+}
+
+div.list {
+  flex-direction: column;
+}

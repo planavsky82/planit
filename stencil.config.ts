@@ -1,10 +1,12 @@
 import { Config } from '@stencil/core';
 import { postcss } from '@stencil/postcss';
 import autoprefixer from 'autoprefixer';
-import tailwindcss from 'tailwindcss';
+import tailwind from 'stencil-tailwind'
 
 export const config: Config = {
   namespace: 'planit-components',
+  taskQueue: 'async',
+  buildEs5: 'prod',
   outputTargets: [
     {
       type: 'dist',
@@ -22,8 +24,11 @@ export const config: Config = {
     },
   ],
   plugins: [
+    tailwind(),
     postcss({
-      plugins: [autoprefixer(), tailwindcss()]
+      plugins: [
+        autoprefixer()
+      ]
     })
   ]
 };
