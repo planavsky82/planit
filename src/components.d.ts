@@ -12,6 +12,9 @@ export namespace Components {
     }
     interface PlanitContainer {
     }
+    interface PlanitLoadingIndicator {
+        "display": boolean;
+    }
 }
 declare global {
     interface HTMLPlanitCollectionElement extends Components.PlanitCollection, HTMLStencilElement {
@@ -26,9 +29,16 @@ declare global {
         prototype: HTMLPlanitContainerElement;
         new (): HTMLPlanitContainerElement;
     };
+    interface HTMLPlanitLoadingIndicatorElement extends Components.PlanitLoadingIndicator, HTMLStencilElement {
+    }
+    var HTMLPlanitLoadingIndicatorElement: {
+        prototype: HTMLPlanitLoadingIndicatorElement;
+        new (): HTMLPlanitLoadingIndicatorElement;
+    };
     interface HTMLElementTagNameMap {
         "planit-collection": HTMLPlanitCollectionElement;
         "planit-container": HTMLPlanitContainerElement;
+        "planit-loading-indicator": HTMLPlanitLoadingIndicatorElement;
     }
 }
 declare namespace LocalJSX {
@@ -38,9 +48,13 @@ declare namespace LocalJSX {
     }
     interface PlanitContainer {
     }
+    interface PlanitLoadingIndicator {
+        "display"?: boolean;
+    }
     interface IntrinsicElements {
         "planit-collection": PlanitCollection;
         "planit-container": PlanitContainer;
+        "planit-loading-indicator": PlanitLoadingIndicator;
     }
 }
 export { LocalJSX as JSX };
@@ -49,6 +63,7 @@ declare module "@stencil/core" {
         interface IntrinsicElements {
             "planit-collection": LocalJSX.PlanitCollection & JSXBase.HTMLAttributes<HTMLPlanitCollectionElement>;
             "planit-container": LocalJSX.PlanitContainer & JSXBase.HTMLAttributes<HTMLPlanitContainerElement>;
+            "planit-loading-indicator": LocalJSX.PlanitLoadingIndicator & JSXBase.HTMLAttributes<HTMLPlanitLoadingIndicatorElement>;
         }
     }
 }
